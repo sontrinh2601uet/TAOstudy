@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TAOstudy</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+
+    <string name="title_1st_page">Bài tập</string>
+    <string name="title_2nd_page">Kết quả</string>
+    <string name="title_3rd_page">Học tập</string>
 </resources>

@@ -1,4 +1,4 @@
-package self.sontq.taostudy.ui.notifications;
+package self.sontq.taostudy.ui.study;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,17 +13,17 @@ import android.arch.lifecycle.ViewModelProvider;
 
 import self.sontq.taostudy.R;
 
-public class NotificationsFragment extends Fragment {
+public class StudyFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private StudyViewModel studyViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        studyViewModel =
+                new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(StudyViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_study, container, false);
         final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        studyViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

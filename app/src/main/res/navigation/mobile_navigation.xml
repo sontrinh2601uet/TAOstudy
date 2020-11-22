@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_homework">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="self.sontq.taostudy.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_homework"
+        android:name="self.sontq.taostudy.ui.homework.HomeWorkFragment"
+        android:label="@string/title_1st_page"
+        tools:layout="@layout/fragment_homework" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="self.sontq.taostudy.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_result"
+        android:name="self.sontq.taostudy.ui.result.ResultFragment"
+        android:label="@string/title_2nd_page"
+        tools:layout="@layout/fragment_result" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="self.sontq.taostudy.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_study"
+        android:name="self.sontq.taostudy.ui.study.StudyFragment"
+        android:label="@string/title_3rd_page"
+        tools:layout="@layout/fragment_study" />
 </navigation>

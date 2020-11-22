@@ -1,4 +1,4 @@
-package self.sontq.taostudy.ui.dashboard;
+package self.sontq.taostudy.ui.result;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,17 +13,17 @@ import android.arch.lifecycle.ViewModelProvider;
 
 import self.sontq.taostudy.R;
 
-public class DashboardFragment extends Fragment {
+public class ResultFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private ResultViewModel resultViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        resultViewModel =
+                new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(ResultViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_result, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        resultViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
