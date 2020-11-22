@@ -4,4 +4,13 @@
     <string name="title_1st_page">Bài tập</string>
     <string name="title_2nd_page">Kết quả</string>
     <string name="title_3rd_page">Học tập</string>
+
+    <!-- Login Activity -->
+    <string name="login">Đăng nhập</string>
+    <string name="prompt_email">Tài khoản</string>
+    <string name="prompt_password">Mật khẩu</string>
+    <string name="error_invalid_email">Tài khoản đăng nhập không đúng</string>
+    <string name="password_error">Hãy nhập mật khẩu</string>
+    <string name="error_invalid_password">Mật khẩu phải nhiều hơn 6 ký tự</string>
+    <string name="login_success">Đăng nhập thành công</string>
 </resources>
