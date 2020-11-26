@@ -46,6 +46,7 @@
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
                         android:paddingStart="5dp"
+                        android:text="duan"
                         android:singleLine="true"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -66,6 +67,7 @@
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:paddingStart="5dp"
+                        android:text="abc123"
                         android:singleLine="true"/>
 
                 </com.google.android.material.textfield.TextInputLayout>

@@ -12,5 +12,11 @@
     <string name="error_invalid_email">Tài khoản đăng nhập không đúng</string>
     <string name="password_error">Hãy nhập mật khẩu</string>
     <string name="error_invalid_password">Mật khẩu phải nhiều hơn 6 ký tự</string>
+    <string name="request_permission">Ứng dụng yêu cầu truy cập mạng để hoạt động</string>
     <string name="login_success">Đăng nhập thành công</string>
+    <string name="login_fail">Tài khoản hoặc mật khẩu không đúng</string>
+
+    <!-- In function -->
+
+
 </resources>
