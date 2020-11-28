@@ -1,11 +1,9 @@
 package self.sontq.taostudy;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,16 +15,12 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import okhttp3.Headers;
 import retrofit2.Call;
-import retrofit2.Response;
-import self.sontq.taostudy.api.ServiceBuilder;
-
 import retrofit2.Callback;
+import self.sontq.taostudy.api.ServiceBuilder;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String[] REQUEST_PERMISSION = {
-            Manifest.permission.INTERNET,
-            Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
+            Manifest.permission.INTERNET
     };
 
     EditText email, password;
@@ -47,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
 
         requestPermission();
         login.setOnClickListener(v -> SetValidation());
-        login.performClick();
+        //login.performClick();
     }
 
     public void SetValidation() {
@@ -63,16 +57,15 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-
         ServiceBuilder.getApiServiceAuthen().login(email.getText().toString(), password.getText().toString(), "Log in", 1).enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, retrofit2.Response<String> response) {
                 Headers headers = response.headers();
-                String cookie = response.headers().get("Set-Cookie");
-                System.out.println("this cookie: "+cookie);
+                String cookie = headers.get("Set-Cookie");
 
-                MainActivity.cookie = cookie;
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.putExtra("cookie", cookie);
+                startActivity(intent);
             }
 
             @Override

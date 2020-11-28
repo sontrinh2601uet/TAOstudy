@@ -15,6 +15,7 @@ import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Headers;
 
 public class ServiceBuilder {
     private static final long TIME_OUT_CONNECT = 30;
